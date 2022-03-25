@@ -6,7 +6,7 @@ import java.util.Stack;
  *
  */
 public class Predicates {
-    private Stack<String> type = new Stack<>(); //Stack used to store the predicate type
+    private Stack<String> typePredicate = new Stack<>(); //Stack used to store the predicate type
     private Stack<String> predicates = new Stack<>(); //store the predicates
     public static boolean result; //returns true or false, depending on the result
 
@@ -40,7 +40,7 @@ public class Predicates {
         // Verificar si el primer signo de lo que se quiera verificar sea uno de los predicado disponibles
         if (predicado.toLowerCase().contains("Atom") || predicado.toLowerCase().contains("Equal") || predicado.toLowerCase().contains("List")
                 || predicado.toLowerCase().contains("<") || predicado.toLowerCase().contains(">") || predicado.toLowerCase().contains("=")) {
-            type.push(tipos[1]);
+            typePredicate.push(tipos[1]);
         }
 
         // Ir metiendo los numeros o signos que hayan metido en el HashMap
@@ -63,7 +63,7 @@ public class Predicates {
             // if we only use (Atom number)
         }
 
-        //Switch
+        // Search the case for the value.
         switch (predicates.get(1)) {
             case "Atom":
                 if (lista == true) {

@@ -83,8 +83,11 @@ class ArithmeticOperations{
 
                         break;
                     case "/":
-                        res /= Float.parseFloat(operacionOrdenadas.removeFirst()); 
-
+                    	try {
+                    		res /= Float.parseFloat(operacionOrdenadas.removeFirst());	
+                    	}catch(ArithmeticException e) {
+                    		System.out.println("NO SE PUEDE DIVIDIR POR 0");
+                    	}
                         break;
                     default:
                         break;
@@ -92,7 +95,6 @@ class ArithmeticOperations{
             }
             operaciones.addFirst(String.valueOf(res)); // Se agrega a las operaciones nuestro resultado
 
-            
             if ( operaciones.size() == 1){
                 System.out.println(res);
                 this.resultado = res;

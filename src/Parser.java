@@ -26,7 +26,6 @@ public class Parser {
         parameters =new LinkedList<>();
         tasks = new LinkedList<>();
 
-        //=======================================================================================
         try {
 
             //Parser
