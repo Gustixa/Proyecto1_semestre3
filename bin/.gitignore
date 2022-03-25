@@ -1,8 +1,8 @@
-/AritmethicOperationResult.class
-/DemoInterpreter.class
-/IOperationResult.class
-/Interpreter.class
-/SintaxScanner.class
-/Tokens.class
-/Interpreter$1.class
 /Interpreter$2.class
+/Interpreter$1.class
+/booleanOperationResutl.class
+/booleanOperationResult.class
+/IPattern.class
+/StackNodes.class
+/IStack.class
+/Node.class

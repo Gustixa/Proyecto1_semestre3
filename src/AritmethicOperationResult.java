@@ -1,4 +1,3 @@
-
 /**
  * @author MAAG
  *
@@ -18,5 +17,11 @@ public class AritmethicOperationResult implements IOperationResult {
 		this.key = key;
 		this.result = result;
 	}
-
+	
+	@Override
+	public void booleanOperation(boolean comparison) {
+		
+	}
+	
+	
 }
