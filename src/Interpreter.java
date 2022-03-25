@@ -164,6 +164,7 @@ public class Interpreter {
 	    }
 	    AritmethicOperationResult miResult = new AritmethicOperationResult();
 	    miResult.addResults(typeOperation, "" + total);
+	    miResult.SeparatingData(expresion);
 	    return miResult;
 	}
 	
