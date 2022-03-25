@@ -71,4 +71,12 @@ public class Defun {
         }
         return newFunction;
     }
+    
+    /**
+     * 
+     * @return
+     */
+    public boolean getIsCons() {
+    	return IsCond;
+    }
 }
