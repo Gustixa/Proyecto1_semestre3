@@ -20,12 +20,12 @@ class OperacionesAritmeticas{
     public OperacionesAritmeticas(String funcion){
         for (int i = 0; i<funcion.length(); i++){
             // Verifica si es un simbolo matematico
-            if (funcion.charAt(i) == "+" || funcion.charAt(i) == "-" || funcion.charAt(i) == "*" || funcion.charAt(i) == "/"){ 
+            if (funcion.charAt(i) == '+' || funcion.charAt(i) == '-' || funcion.charAt(i) == '*' || funcion.charAt(i) == '/'){ 
                 operaciones.addFirst(String.valueOf(funcion.charAt(i)));
             // Verifica si es un numero  
             }else if(Character.isDigit(funcion.charAt(i))){
                 // Verifica si es decimal
-                if  (funcion.charAt(i+1) == "."){
+                if  (funcion.charAt(i+1) == '.'){
                     numero += Character.toString(funcion.charAt(i)) + Character.toString(funcion.charAt(i+1)) +  Character.toString(funcion.charAt(i+2));
                     i += 3;
                 }
@@ -41,7 +41,7 @@ class OperacionesAritmeticas{
                 
             }
             //Si identifica un parentesis cerrado resolvera una operacion y la resolvera
-            if (funcion.charAt(i) == ")"){
+            if (funcion.charAt(i) == ')'){
                 getOperacion();
             }
         }
