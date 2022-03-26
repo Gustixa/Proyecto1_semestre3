@@ -4,16 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ExpresionesLogicasTest {
 
-    /**  @Test
-    void atomos(){
-      
-        String enun = "(Atom '(1))";
-        ExpresionesLogicas expLog = new ExpresionesLogicas(enun);
-        boolean resultado = expLog.res;
-        assertEquals(false, resultado);
-      
-    }**/
-  
+
   
 
     @Test
@@ -56,5 +47,14 @@ class ExpresionesLogicasTest {
       
     }
 
-
+    /**  @Test
+    void atomos(){
+      
+        String enun = "(Atom '(1))";
+        ExpresionesLogicas expLog = new ExpresionesLogicas(enun);
+        boolean resultado = expLog.res;
+        assertEquals(false, resultado);
+      
+    }**/
+  
 }
