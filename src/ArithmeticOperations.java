@@ -96,14 +96,14 @@ class ArithmeticOperations{
             operaciones.addFirst(String.valueOf(res)); // Se agrega a las operaciones nuestro resultado
 
             if ( operaciones.size() == 1){
-                System.out.println(res);
+                //System.out.println(res);
                 this.resultado = res;
                 return res;
             }
         } catch (Exception e) {
-            System.out.println("Ha ocurrido un error, El mensaje es el siguiente: " + e.getMessage());
+            System.err.println();
         }
 
-        return res;
+        return this.resultado;
     }
 }

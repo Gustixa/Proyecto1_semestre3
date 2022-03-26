@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 /**
  *E-Reference https://beginnersbook.com/2013/12/java-string-substring-method-example/ 
- * @author s5349
+ * @author Rafael Pappa, Samuel Argueta
  *
  */
 

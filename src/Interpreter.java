@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * This class it's use to simulate the functionality of the interpreter.
  * 
- * @author Samuel Argueta
+ * @author Samuel Argueta, Sebastian Tuch, Rafael Pappa
  *
  */
 public class Interpreter {
@@ -68,8 +68,10 @@ public class Interpreter {
 		            }else {
 		            	name = dataExpresion[i+1];
 		            	String[] parameters = new String[dataExpresion.length - (i+1)]; //Parameters
-		            	for(int j = dataExpresion.length - (i+1); j < dataExpresion.length; i++) {
-		            		parameters[i] = dataExpresion[j];
+		            	int count = 0;
+		            	for(int j = dataExpresion.length - (i+1); j < dataExpresion.length; j++) {
+		            		parameters[count] = dataExpresion[j];
+		            		count++;
 		            	}
 		            	Functions.doFun(name, parameters); //EXECUTES THE FUNCION
 		            	break;
@@ -77,7 +79,14 @@ public class Interpreter {
 				}else if(symbols.contains(dataExpresion[i])){
 					ArithmeticOperations operations = new ArithmeticOperations(expresion);
 					float result = operations.getOperation();
-					//System.out.println(result);
+					System.out.println(result);
+				}else if(dataExpresion[i].equals("cond")) {
+					Conditions condition = new Conditions(expresion);
+					System.out.println(condition);
+					
+				}else if(dataExpresion[i].equals("quote")) {
+					Quote quote = new Quote(expresion);
+					System.out.println(quote);
 				}else {
 					continue;
 				}

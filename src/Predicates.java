@@ -1,13 +1,12 @@
 import java.util.Stack;
 
 /**
+ * This class simulate the Predicates functionality.
  * 
- * @author s5349
+ * @author Samuel Argueta, Sebastian Tuch
  *
  */
 public class Predicates {
-    private Stack<String> typePredicate = new Stack<>(); //Stack used to store the predicate type
-    private Stack<String> predicates = new Stack<>(); //store the predicates
     public static boolean result; //returns true or false, depending on the result
 
     /**
@@ -16,6 +15,7 @@ public class Predicates {
      */
     public Predicates(String predicate) {
         result = result(predicate); //obtains the result from the result method
+        
     }
 
     /**
@@ -25,6 +25,10 @@ public class Predicates {
      * @Pre Predicate expression must not be null
      */
     private boolean result(String predicate) {
+    	Stack<String> typePredicate = new Stack<>(); //Stack used to store the predicate type
+        Stack<String> predicates = new Stack<>(); //store the predicates
+        
+        
         boolean lista = false; //checks if it is a list or not
         String predicado = predicate.replace("(", " "); //Predicate
         predicado = predicado.replace(")", " ");
@@ -185,4 +189,6 @@ public class Predicates {
         }
         return result;
     }
+    
+    
 }
