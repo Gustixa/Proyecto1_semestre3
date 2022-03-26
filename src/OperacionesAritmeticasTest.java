@@ -20,7 +20,7 @@ class OperacionesAritmeticasTest {
         String enun = "(- 50 29)";
         OperacionesAritmeticas operacionAritmetica = new OperacionesAritmeticas((enun));
         float igual = operacionAritmetica.resultado;
-        assertEquals(11, igual);
+        assertEquals(21, igual);
 
     }
 
